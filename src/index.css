@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+
+  --main-background: hsla(0, 0%, 98%, 1);
+  --primary-cyan:hsl(176, 50%, 47%);
+  --primary-darkCyan:hsl(176, 72%, 28%);
+  --neutral-black:#000;
+  --neutral-darkGray:hsl(0, 0%, 48%);
+  --neutral-white:#FFFFFF;
+  --secondary-gray: hsla(0, 0%, 44%, 1);
+  --primary-border:1px solid hsla(0, 0%, 0%, 0.05);
+  --inner-border:1px solid hsla(0, 29%, 48%, 0.15);
+  --options-border: 1px solid hsla(0, 0%, 0%, 0.15);
+  font-family: 'Commissioner', sans-serif;
+  font-size: 16px;
+}
+
+*, *::after, *::before{
+  margin: 0;
+  padding:0;
+  border:none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+img {
+  max-width:100%;
+  height: auto;
+}
+body{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width:100vw;
+}
