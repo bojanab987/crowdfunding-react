@@ -22,7 +22,6 @@ export default function Main() {
                 <p className="top__text">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
                 <div className="top__button">
                     <button className="top__button-left js-back-this-project" onClick={() => setModalVisible(true)}>Back this project
-                        {/*       <a className="link js-back-project" href="#getstarted"> Back this project </a>*/}
                     </button>
                     <button className={isBookmarked === true ? "top__button-right bookmarked" : "top__button-right"} onClick={handleBookmarkedClick}>
                         <span className={isBookmarked === true ? "bookmark-icon bookmarked" : "bookmark-icon"}></span>

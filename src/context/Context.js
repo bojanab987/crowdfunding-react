@@ -1,6 +1,5 @@
 import React, { useState, useContext, createContext } from 'react';
 
-// const OverlayContext = createContext();
 const Context = createContext();
 
 const ContextProvider = ({ children }) => {
