@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ReactComponent as Logo } from "../assets/logo.svg";
-import { ReactComponent as HamburgerLogo } from "../assets/icon-hamburger.svg";
-import { ReactComponent as IconCloseMenu } from "../assets/icon-close-menu.svg";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { ReactComponent as HamburgerLogo } from "../../assets/icon-hamburger.svg";
+import { ReactComponent as IconCloseMenu } from "../../assets/icon-close-menu.svg";
 import "./Navbar.css";
 
 export default function Navbar() {

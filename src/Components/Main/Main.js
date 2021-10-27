@@ -1,5 +1,5 @@
 
-import { ReactComponent as MastercraftLogo } from '../assets/logo-mastercraft.svg';
+import { ReactComponent as MastercraftLogo } from '../../assets/logo-mastercraft.svg';
 import './Main.css';
 
 const showModal = () => {

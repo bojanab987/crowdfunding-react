@@ -85,18 +85,18 @@
   }  
 
   .bookmark-icon{
-    background-image: url('../assets/icon-bookmark.svg');
+    background-image: url('../../assets/icon-bookmark.svg');
     display: inline-block;
     width: 3.5rem;
     height: 3.5rem;
     background-size: cover;
   }
   .bookmark-icon:hover{
-    background-image: url('../assets/icon-bookmark-light.svg');
+    background-image: url('../../assets/icon-bookmark-light.svg');
   }
 
   .bookmark-icon.bookmarked{
-    background-image: url('../assets/icon-bookmark-bookmarked.svg');
+    background-image: url('../../assets/icon-bookmark-bookmarked.svg');
   }
 
   /*progress statistics start*/
