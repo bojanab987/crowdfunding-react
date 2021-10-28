@@ -1,0 +1,16 @@
+.header__container{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-image: url('../../assets/image-hero-desktop.jpg');
+    height:400px;
+    background-size: cover;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    .header__container{
+      background-image: url(../../assets/image-hero-mobile.jpg);
+      height:18.75rem;      
+  }
+}

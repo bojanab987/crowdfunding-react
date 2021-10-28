@@ -3,6 +3,9 @@
   margin:inherit;
   padding: inherit;
   background-color:var(--main-background);  
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .page-wrapper{
