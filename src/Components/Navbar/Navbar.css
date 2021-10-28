@@ -190,14 +190,7 @@
     .show {
       display:flex;
       margin-top: -2rem;      
-    }
-    .nav-shown{
-      z-index: 50;
-      background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
-      background-blend-mode: overlay;
-      background-size: cover;
-      display:flex;
-    }
+    }    
 
   .hide{
     display: none;    

@@ -214,24 +214,6 @@
     background-color: var(--primary-darkCyan);
     cursor: pointer;
   }
-  
-  .modal-overlay {  
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;  
-    display:none;
-  }
-  
-  .modal-shown{
-    z-index: 50;
-    background: hsla(0, 0%, 0%, 0.4988);
-    background-blend-mode: overlay;
-    background-size: cover;
-    display:flex;
-   
-  }
   /*Back this project modal end*/
 
   /*Modal completed start*/

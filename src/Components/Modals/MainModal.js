@@ -1,4 +1,3 @@
-// import { useState } from 'react';
 import { ReactComponent as IconClose } from '../../assets/icon-close-modal.svg';
 import { useMyContext } from '../../context/Context';
 import '../Modals/Modals.css';
@@ -7,10 +6,9 @@ import { options } from './../../data/data';
 
 export default function MainModal() {
 
-    // const [selectedOption, setSelectedOption] = useState("");
-
     const isModalVisible = useMyContext()[4],
-        setModalVisible = useMyContext()[5];
+        setModalVisible = useMyContext()[5],
+        setOverlayVisible = useMyContext()[9];
 
     let visible = {
         visibility: "visible",
@@ -25,7 +23,7 @@ export default function MainModal() {
         <div className={isModalVisible === false ? "modal-default" : "modal-default modal-visible"} style={isModalVisible === true ? { visible } : { hidden }}>
             <div className="modal-content">
                 <div className="close-modal">
-                    <IconClose alt="close-modal" onClick={() => setModalVisible(false)} />
+                    <IconClose alt="close-modal" onClick={() => { setModalVisible(false); setOverlayVisible(false) }} />
                 </div>
                 <div className="modal__top">
                     <h2 className="modal__top-title">Back this project</h2>

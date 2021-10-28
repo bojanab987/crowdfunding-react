@@ -8,7 +8,8 @@ const ContextProvider = ({ children }) => {
     const [totalBackers, setTotalBackers] = useState(5007);
     const [isModalVisible, setModalVisible] = useState(false);
     const [isCompletedModalVisible, setCompletedModalVisible] = useState(false);
-
+    const [isOverlayVisible, setOverlayVisible] = useState(false);
+    const [responsiveMenuVisible, setResponsiveMenuVisible] = useState(false);
 
     return (
         <Context.Provider value={[
@@ -16,7 +17,9 @@ const ContextProvider = ({ children }) => {
             setTotalDonationAmount,
             totalBackers, setTotalBackers,
             isModalVisible, setModalVisible,
-            isCompletedModalVisible, setCompletedModalVisible
+            isCompletedModalVisible, setCompletedModalVisible,
+            isOverlayVisible, setOverlayVisible,
+            responsiveMenuVisible, setResponsiveMenuVisible
         ]}>{children}
         </Context.Provider>
     );

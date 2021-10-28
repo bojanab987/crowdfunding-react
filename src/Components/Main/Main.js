@@ -12,7 +12,8 @@ export default function Main() {
 
     const totalDonationAmount = useMyContext()[0],
         totalBackers = useMyContext()[2],
-        setModalVisible = useMyContext()[5];
+        setModalVisible = useMyContext()[5],
+        setOverlayVisible = useMyContext()[9];
 
     return (
         <main className="container">
@@ -21,7 +22,7 @@ export default function Main() {
                 <h1 className="top__title">Mastercraft Bamboo Monitor Riser</h1>
                 <p className="top__text">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
                 <div className="top__button">
-                    <button className="top__button-left js-back-this-project" onClick={() => setModalVisible(true)}>Back this project
+                    <button className="top__button-left js-back-this-project" onClick={() => { setModalVisible(true); setOverlayVisible(true) }}>Back this project
                     </button>
                     <button className={isBookmarked === true ? "top__button-right bookmarked" : "top__button-right"} onClick={handleBookmarkedClick}>
                         <span className={isBookmarked === true ? "bookmark-icon bookmarked" : "bookmark-icon"}></span>

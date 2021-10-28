@@ -1,0 +1,25 @@
+.nav-shown{
+    z-index: 50;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.0001) 100%);
+    background-blend-mode: overlay;
+    background-size: cover;
+    display:flex;
+  }
+
+  .modal-overlay {  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  
+    display:none;
+  }
+  
+  .modal-shown{
+    z-index: 50;
+    background: hsla(0, 0%, 0%, 0.4988);
+    background-blend-mode: overlay;
+    background-size: cover;
+    display:flex;
+   
+  }

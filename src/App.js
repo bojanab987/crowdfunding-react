@@ -3,6 +3,7 @@ import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import MainModal from './Components/Modals/MainModal'
 import ModalFinal from './Components/Modals/ModalFinal';
+import Overlay from './Components/Overlay/Overlay';
 import { ContextProvider } from './context/Context';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         </div>
         <MainModal />
         <ModalFinal />
+        <Overlay />
       </ContextProvider>
     </div>
   );
