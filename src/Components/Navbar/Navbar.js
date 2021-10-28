@@ -25,9 +25,9 @@ export default function Navbar() {
                     <li className="topnav__icon-close" onClick={() => setResponsiveMenuVisible(false)}>
                         <span><IconCloseMenu alt="close" /></span>
                     </li>
-                    <li><a className="nav-link border-top js-nav-link" onClick={() => setResponsiveMenuVisible(false)} href="#about">About</a></li>
-                    <li><a className="nav-link js-nav-link" onClick={() => setResponsiveMenuVisible(false)} href="/#discover">Discover</a></li>
-                    <li><a className="nav-link border-bottom js-nav-link js-start" onClick={() => { setResponsiveMenuVisible(false); setModalVisible(true) }} href="/#">Get Started</a></li>
+                    <li><a className="nav-link border-top" onClick={() => setResponsiveMenuVisible(false)} href="#about">About</a></li>
+                    <li><a className="nav-link" onClick={() => setResponsiveMenuVisible(false)} href="/#discover">Discover</a></li>
+                    <li><a className="nav-link border-bottom" onClick={() => { setResponsiveMenuVisible(false); setModalVisible(true) }} href="/#">Get Started</a></li>
                 </ul>
             </nav>
         </div>

@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
 import MainModal from './Components/Modals/MainModal'
+import ModalFinal from './Components/Modals/ModalFinal';
 import { ContextProvider } from './context/Context';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
           <Main />
         </div>
         <MainModal />
+        <ModalFinal />
       </ContextProvider>
     </div>
   );

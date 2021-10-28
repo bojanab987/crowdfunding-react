@@ -9,6 +9,7 @@ const ContextProvider = ({ children }) => {
     const [isModalVisible, setModalVisible] = useState(false);
     const [isCompletedModalVisible, setCompletedModalVisible] = useState(false);
 
+
     return (
         <Context.Provider value={[
             totalDonationAmount,
