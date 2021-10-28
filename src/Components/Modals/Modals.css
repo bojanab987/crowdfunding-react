@@ -189,7 +189,7 @@
     left: 1.5rem; 
     top: 0.9375rem; 
     z-index: 9; 
-    opacity: 0.25;
+    opacity: 0.6;
     font-size: 0.875rem;
   }
   .amount-input{
@@ -236,6 +236,30 @@
    
   }
   /*Back this project modal end*/
+
+  /*Modal completed start*/
+.visible{
+  visibility:visible;
+  opacity: 1;
+  border: var(--primary-border);
+  background-color: var(--neutral-white);
+  border-radius: 0.5rem;
+  max-width: 33.75rem;
+  padding: 3rem;
+  justify-content: space-between;
+  z-index: 104;
+}
+.modal-completed-title{
+  font-size: 1.5rem;
+  color:var(--neutral-black);
+}
+
+.modal-completed-text{
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.875rem;
+}
+/*Modal completed end*/
 
 @media screen and (max-width: 768px) {
 /*modal start*/ 
