@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { useMyContext } from '../../context/Context';
 
-export default function Option({ pledgeName, title, minDonation, itemsLeft, description, radioChecked }) {
-    let [isSelectedOption, setSelectedOption] = useState(radioChecked);
+export default function Option({ pledgeName, title, minDonation, itemsLeft, description }) {
+    const [selectedOption, setSelectedOption] = useState("");
     const [donationAmount, setDonationAmount] = useState(minDonation);
+    const [isRadioChecked, setRadioChecked] = useState(false);
 
     let totalDonationAmount = useMyContext()[0],
         setTotalDonationAmount = useMyContext()[1],
@@ -26,23 +27,24 @@ export default function Option({ pledgeName, title, minDonation, itemsLeft, desc
     let divModalOptionClass = "modal__option";
     let divDonationOpenClass = "";
     if (pledgeName === "mahagony") {
-        divModalOptionClass += " options-mahagony"
         divDonationOpenClass = "hidden";
     }
 
 
     const handleChange = (e) => {
-        if (pledgeName === e.target.value) {
-            setSelectedOption(true)
-        }
+        setSelectedOption(e.target.value);
+        setRadioChecked(!isRadioChecked)
     }
 
-    if (isSelectedOption === true) {
+    if (isRadioChecked === true && selectedOption === pledgeName) {
         divModalOptionClass += " selected-pledge";
         divDonationOpenClass = "on-selected";
     } else {
         divModalOptionClass = "modal__option";
         divDonationOpenClass = "hidden";
+        if (pledgeName === "mahagony") {
+            divModalOptionClass += " options-mahagony"
+        }
     }
 
     const handleDonation = () => {
@@ -54,6 +56,8 @@ export default function Option({ pledgeName, title, minDonation, itemsLeft, desc
             setModalVisible(false);
             setCompletedModalVisible(true);
             setDonationAmount(minDonation);
+            setSelectedOption("");
+            setRadioChecked(false);
         }
     }
 
@@ -61,7 +65,7 @@ export default function Option({ pledgeName, title, minDonation, itemsLeft, desc
         <div className={divModalOptionClass}>
             <div className="modal__option-top">
                 <input className="default-input" type="radio" name="pledge" id={pledgeName}
-                    onChange={handleChange} value={pledgeName} checked={isSelectedOption} disabled={pledgeName === "mahagony" ? true : false} />
+                    onChange={handleChange} value={pledgeName} checked={isRadioChecked} disabled={pledgeName === "mahagony" ? true : false} />
                 <span className="modal__option-input"></span>
                 <label className="modal__option-label" htmlFor={pledgeName}>{title}</label>
                 <h3 className={pledgeName === "noreward" ? "hidden" : "options__pledge modal-pledge"}>Pledge ${minDonation} or more</h3>
@@ -71,7 +75,7 @@ export default function Option({ pledgeName, title, minDonation, itemsLeft, desc
                     {description}
                 </p>
             </div>
-            {isSelectedOption &&
+
                 <div className={divDonationOpenClass}>
                 <hr className="hr-line" />
                 <div className="modal__option-bottom">
@@ -84,7 +88,7 @@ export default function Option({ pledgeName, title, minDonation, itemsLeft, desc
                         <button className="continue-btn" onClick={handleDonation}>Continue</button>
                     </div>
                 </div>
-                </div>}
+            </div>
         </div>
     );
 }
