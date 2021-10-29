@@ -20,10 +20,14 @@ export default function MainModal() {
     }
 
     return (
-        <div className={isModalVisible === false ? "modal-default" : "modal-default modal-visible"} style={isModalVisible === true ? { visible } : { hidden }}>
+        <div
+            className={isModalVisible === false ? "modal-default" : "modal-default modal-visible"}
+            style={isModalVisible === true ? { visible } : { hidden }}>
             <div className="modal-content">
                 <div className="close-modal">
-                    <IconClose alt="close-modal" onClick={() => { setModalVisible(false); setOverlayVisible(false) }} />
+                    <IconClose
+                        alt="close-modal"
+                        onClick={() => { setModalVisible(false); setOverlayVisible(false) }} />
                 </div>
                 <div className="modal__top">
                     <h2 className="modal__top-title">Back this project</h2>

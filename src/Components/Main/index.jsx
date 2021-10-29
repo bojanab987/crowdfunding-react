@@ -7,7 +7,7 @@ export default function Main() {
 
     const [isBookmarked, setIsBookmarked] = useState(false);
     const handleBookmarkedClick = () => {
-        setIsBookmarked(!isBookmarked);
+        setIsBookmarked(prev => !prev);
     }
 
     const totalDonationAmount = useMyContext()[0],
@@ -22,9 +22,13 @@ export default function Main() {
                 <h1 className="top__title">Mastercraft Bamboo Monitor Riser</h1>
                 <p className="top__text">A beautiful & handcrafted monitor stand to reduce neck and eye strain.</p>
                 <div className="top__button">
-                    <button className="top__button-left js-back-this-project" onClick={() => { setModalVisible(true); setOverlayVisible(true) }}>Back this project
+                    <button
+                        className="top__button-left"
+                        onClick={() => { setModalVisible(true); setOverlayVisible(true) }}>
+                        Back this project
                     </button>
-                    <button className={isBookmarked === true ? "top__button-right bookmarked" : "top__button-right"} onClick={handleBookmarkedClick}>
+                    <button
+                        className={isBookmarked === true ? "top__button-right bookmarked" : "top__button-right"} onClick={handleBookmarkedClick}>
                         <span className={isBookmarked === true ? "bookmark-icon bookmarked" : "bookmark-icon"}></span>
                     </button>
                 </div>
@@ -33,7 +37,7 @@ export default function Main() {
             <div className="progress__container">
                 <div className="progress__stats">
                     <div className="progress__stats-money">
-                        <p className="number js-total-donation">${totalDonationAmount}</p>
+                        <p className="number">${totalDonationAmount}</p>
                         <p className="text">of $100,000 backed</p>
                     </div>
                     <div className="progress__stats-backers">
@@ -47,7 +51,13 @@ export default function Main() {
                 </div>
                 <div className="progress__bar">
                     <label className="progress__bar-label" htmlFor="progress"></label>
-                    <meter className="progres__bar-level js-progress-bar" id="progress" min="0" max="100000" value={totalDonationAmount}></meter>
+                    <meter
+                        className="progres__bar-level"
+                        id="progress"
+                        min="0"
+                        max="100000"
+                        value={totalDonationAmount}>
+                    </meter>
                 </div>
             </div>
 
@@ -76,8 +86,14 @@ export default function Main() {
                         <p className="options__text text">You get an ergonomic stand made of natural bamboo. You've helped us launch
                             our promotional campaign, and you’ll be added to a special Backer member list.</p>
                         <div className="options__bottom">
-                            <p className="number options__bottom-left">101 <span className="text small">left</span></p>
-                            <button className="options-button bamboo options__bottom-right js-select-reward-bamboo" onClick={() => setModalVisible(true)}>Select reward</button>
+                            <p
+                                className="number options__bottom-left">101
+                                <span className="text small">left</span>
+                            </p>
+                            <button
+                                className="options-button bamboo options__bottom-right"
+                                onClick={() => setModalVisible(true)}>Select reward
+                            </button>
                         </div>
                     </div>
 
@@ -90,7 +106,10 @@ export default function Main() {
                             You’ll be added to our Backer member list. Shipping is included.</p>
                         <div className="options__bottom">
                             <p className="number options__bottom-left">64 <span className="small text">left</span></p>
-                            <button className="options-button black options__bottom-right js-select-reward-black" onClick={() => setModalVisible(true)}>Select reward</button>
+                            <button
+                                className="options-button black options__bottom-right"
+                                onClick={() => setModalVisible(true)}>Select reward
+                            </button>
                         </div>
                     </div>
 
