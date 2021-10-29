@@ -1,9 +1,9 @@
 import './App.css';
-import Header from './Components/Header/Header';
-import Main from './Components/Main/Main';
+import Header from './Components/Header';
+import Main from './Components/Main';
 import MainModal from './Components/Modals/MainModal'
 import ModalFinal from './Components/Modals/ModalFinal';
-import Overlay from './Components/Overlay/Overlay';
+import Overlay from './Components/Overlay';
 import { ContextProvider } from './context/Context';
 
 function App() {
